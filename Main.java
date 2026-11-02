@@ -21,6 +21,8 @@ class Main {
         greetUser(name, age);
 
         scanner.close();
+
+        System.out.println("Подготовка к объединению веток");
     }
 
     static void greetUser(String name, int age) {
