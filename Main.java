@@ -14,6 +14,11 @@ class Main {
     }
 
     static void greetUser(String name) {
+        if (name.isBlank()) {
+            System.out.println("Ошибка: имя не может быть пустым!");
+            return;
+        }
+
         System.out.println("Привет, " + name);
     }
 }
