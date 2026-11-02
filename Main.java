@@ -5,20 +5,26 @@ class Main {
         System.out.println("Это добавлено в ветке main");
 
         Scanner scanner = new Scanner(System.in);
+
         System.out.print("Введите имя: ");
         String name = scanner.nextLine();
 
-        greetUser(name);
+        if (name.isBlank()) {
+            System.out.println("Ошибка: имя не может быть пустым!");
+            scanner.close();
+            return;
+        }
+
+        System.out.print("Введите возраст: ");
+        int age = scanner.nextInt();
+
+        greetUser(name, age);
 
         scanner.close();
     }
 
-    static void greetUser(String name) {
-        if (name.isBlank()) {
-            System.out.println("Ошибка: имя не может быть пустым!");
-            return;
-        }
-
+    static void greetUser(String name, int age) {
         System.out.println("Привет, " + name);
+        System.out.println("Тебе " + age + " лет.");
     }
 }
