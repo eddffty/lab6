@@ -8,7 +8,12 @@ class Main {
         System.out.print("Введите имя: ");
         String name = scanner.nextLine();
 
-        System.out.println("Привет, " + name);
+        greetUser(name);
+
         scanner.close();
+    }
+
+    static void greetUser(String name) {
+        System.out.println("Привет, " + name);
     }
 }
